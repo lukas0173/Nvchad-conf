@@ -6,7 +6,7 @@ local lint = null_ls.builtins.diagnostics
 local sources = {
 
   -- webdev stuff
-  formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
+  formatting.deno_fmt,                                                    -- choosed deno for ts/js files cuz its very fast!
   formatting.prettier.with { filetypes = { "html", "markdown", "css" } }, -- so prettier works only on these filetypes
 
   -- Lua
@@ -26,7 +26,7 @@ local sources = {
   formatting.prettierd,
 
   --verilog
-  formatting.verible_verilog_format
+  formatting.verible_verilog_format,
 }
 
 null_ls.setup {
