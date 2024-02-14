@@ -23,7 +23,10 @@ local sources = {
   formatting.black,
 
   -- html, js
-  formatting.prettierd
+  formatting.prettierd,
+
+  --verilog
+  formatting.verible_verilog_format
 }
 
 null_ls.setup {

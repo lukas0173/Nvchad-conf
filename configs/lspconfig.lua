@@ -66,4 +66,5 @@ lspconfig.verible.setup {
     "verilog",
     "systemverilog",
   },
+  single_file_support = true,
 }
