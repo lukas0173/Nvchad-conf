@@ -19,5 +19,19 @@ vim.api.nvim_set_hl(0, "LspInlayHint", { fg = "#bfc6d4", bg = "#2f2e3e" })
 --   end,
 -- })
 
-
 vim.api.nvim_command "filetype plugin on"
+
+-- Neovide config
+if vim.g.neovide then
+  vim.g.neovide_transparency = 0.95
+  vim.g.neovide_floating_blur_amount_x = 2.0
+  vim.g.neovide_floating_blur_amount_y = 2.0
+  vim.g.neovide_window_blurred = true
+
+  vim.g.neovide_refresh_rate = 120
+  vim.g.neovide_refresh_rate_idle = 5
+
+  vim.g.neovide_cursor_animation_length = 0.08
+
+  vim.g.neovide_cursor_vfx_mode = "pixiedust"
+end
