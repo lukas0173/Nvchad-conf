@@ -23,7 +23,7 @@ local servers = {
   "rust_analyzer",
   "pylsp",
   "html",
-  "verible",
+  "veridian"
 }
 
 for _, lsp in ipairs(servers) do
