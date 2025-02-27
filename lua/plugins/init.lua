@@ -83,4 +83,31 @@ return {
       "nvim-telescope/telescope.nvim",
     },
   },
+  {
+    "mistricky/codesnap.nvim",
+    build = "make",
+    cmd = "CodeSnap",
+    config = function()
+      require("configs.CodeSnap_conf").setup()
+    end,
+  },
+  {
+    "SUSTech-data/neopyter",
+    lazy = false,
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-treesitter/nvim-treesitter', -- neopyter don't depend on `nvim-treesitter`, but does depend on treesitter parser of python
+      'AbaoFromCUG/websocket.nvim',  -- for mode='direct'
+    },
+
+    ---@type neopyter.Option
+    opts = {
+        mode="direct",
+        remote_address = "127.0.0.1:9000",
+        file_pattern = { "*.ju.*" },
+        on_attach = function(bufnr)
+            -- do some buffer keymap
+        end,
+    },
+}
 }

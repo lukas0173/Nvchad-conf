@@ -31,7 +31,10 @@ local sources = {
 
   -- shellscript
   formatting.shfmt,
-  diagnostics.shellcheck
+  diagnostics.shellcheck,
+
+  -- golang
+  formatting.gofumpt
 }
 
 null_ls.setup {

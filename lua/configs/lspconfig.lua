@@ -24,9 +24,10 @@ local servers = {
   "rust_analyzer",
   "pylsp",
   "html",
-  "verible",
+  "veridian",
   "matlab_ls",
   "zls",
+  "gopls"
 }
 
 local nvlsp = require "nvchad.configs.lspconfig"
