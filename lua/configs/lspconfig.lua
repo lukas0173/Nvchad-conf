@@ -27,7 +27,8 @@ local servers = {
   "veridian",
   "matlab_ls",
   "zls",
-  "gopls"
+  "gopls",
+  "solidity"
 }
 
 local nvlsp = require "nvchad.configs.lspconfig"
