@@ -59,3 +59,6 @@ if vim.g.neovide then
 
 vim.g.neovide_cursor_animate_command_line = false
 end
+
+vim.g.python3_host_prog = '/home/kiet/.venv/python3.10/bin/python3'
+vim.g.loaded_python3_provider = nil

@@ -91,4 +91,9 @@ return {
       require("configs.CodeSnap_conf").setup()
     end,
   },
+  {
+    "luk400/vim-jukit",
+    cmd = "Jupyter",
+  }
+  
 }
