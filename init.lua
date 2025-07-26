@@ -30,8 +30,35 @@ dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
-require "autocmds"
+require "nvchad.autocmds"
 
 vim.schedule(function()
   require "mappings"
 end)
+
+-- Relative number
+vim.api.nvim_command "set rnu"
+
+-- Neovide config
+if vim.g.neovide then
+  vim.o.guifont = "JetBrains Mono:h14"
+
+  vim.g.neovide_transparency = 0.95
+  vim.g.neovide_floating_blur_amount_x = 2.0
+  vim.g.neovide_floating_blur_amount_y = 2.0
+  vim.g.neovide_window_blurred = true
+
+  vim.g.neovide_remember_window_size = false
+
+  vim.g.neovide_refresh_rate = 120
+  vim.g.neovide_refresh_rate_idle = 5
+
+  vim.g.neovide_cursor_animation_length = 0.08
+
+  vim.g.neovide_cursor_vfx_mode = "pixiedust"
+
+vim.g.neovide_cursor_animate_command_line = false
+end
+
+vim.g.python3_host_prog = '/home/kiet/.venv/python3.10/bin/python3'
+vim.g.loaded_python3_provider = nil
