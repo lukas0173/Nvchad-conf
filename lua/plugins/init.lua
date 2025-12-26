@@ -1,8 +1,8 @@
 return { {
-    "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
-    opts = require "configs.conform",
-  },
+  "stevearc/conform.nvim",
+  -- event = 'BufWritePre', -- uncomment for format on save
+  opts = require "configs.conform",
+},
 
   -- These are some examples, uncomment them if you want to see them work!
   {
@@ -75,7 +75,7 @@ return { {
   {
     "NeogitOrg/neogit",
     dependencies = {
-      "nvim-lua/plenary.nvim", -- required
+      "nvim-lua/plenary.nvim",  -- required
       "sindrets/diffview.nvim", -- optional - Diff integration
 
       -- Only one of these is needed.
@@ -90,20 +90,41 @@ return { {
       require("configs.CodeSnap_conf").setup()
     end,
   },
+  -- {
+  --   'beeender/richclip.nvim',
+  --   config = function()
+  --     require("richclip").setup(
+  --       {
+  --         richclip_path = nil,
+  --         --- Set g:clipboard to let richclip take over the clipboard.
+  --         set_g_clipboard = true,
+  --         --- To print debug logs
+  --         enable_debug = false
+  --       }
+  --     )
+  --   end
+  -- },
   {
-    "SUSTech-data/neopyter",
-    cmd = "Neopyter",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter", -- neopyter don't depend on `nvim-treesitter`, but does depend on treesitter parser of python
-      "AbaoFromCUG/websocket.nvim", -- for mode='direct'
-    },
+    'MeanderingProgrammer/render-markdown.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' },
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    opts = {},
+  },
+  {
+    "michaelb/sniprun",
+    branch = "master",
 
-    ---@type neopyter.Option
-    opts = {
-      mode = "direct",
-      remote_address = "127.0.0.1:9001",
-      file_pattern = { "*.ju.*" },
-    },
+    build = "sh install.sh",
+    -- do 'sh install.sh 1' if you want to force compile locally
+    -- (instead of fetching a binary from the github release). Requires Rust >= 1.65
+
+    config = function()
+      require("sniprun").setup({
+      -- your options
+      })
+    end,
+    lazy = false
   },
 }
+
