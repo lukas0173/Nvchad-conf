@@ -8,5 +8,6 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
--- ipynb conversion 
-map("n", "<leader>np", ":call jukit#convert#notebook_convert(\"jupyter-notebook\")<cr>", {desc = "ipynb conversion"})
+
+-- Run code
+map("n", "<leader>ru", "<cmd> RunCode <cr>")

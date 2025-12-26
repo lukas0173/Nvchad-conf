@@ -89,10 +89,10 @@ local options = {
     float = {
       relative = "editor",
       row = 0.3,
-      col = 0.25,
-      width = 0.5,
-      height = 0.4,
-      border = "single",
+      col = 0.1,
+      width = 0.8,
+      height = 0.5,
+      border = "none",
     },
   },
 

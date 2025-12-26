@@ -8,7 +8,7 @@ function M.setup()
       javascript = "node",
       rust = "cd $dir && rustc $fileName && ./$fileNameWithoutExt",
       cpp = "cd $dir && g++ -std=c++20 $fileName -o $fileNameWithoutExt && time ./$fileNameWithoutExt && rm $fileNameWithoutExt",
-      c = "cd $dir && gcc $fileName -o $fileNameWithoutExt && time ./$fileNameWithoutExt && rm $fileNameWithoutExt",
+      c = "cd \"$dir\" && gcc $fileName -o $fileNameWithoutExt && time ./$fileNameWithoutExt && rm $fileNameWithoutExt",
       sh = "chmod +x $fileName && time bash $fileName",
     },
 
