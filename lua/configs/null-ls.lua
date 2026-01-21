@@ -15,6 +15,7 @@ local sources = {
 
   -- cpp
   formatting.clang_format,
+  formatting.mbake,
 
   -- Rust
   formatting.rustfmt,

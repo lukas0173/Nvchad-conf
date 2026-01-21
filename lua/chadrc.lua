@@ -7,7 +7,7 @@ local options = {
     integrations = {},
     changed_themes = {},
     transparency = false,
-    theme_toggle = { "catppuccin", "one_light" },
+    theme_toggle = { "catppuccin", "catppuccin" },
   },
 
   ui = {
